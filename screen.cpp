@@ -1,9 +1,6 @@
 #include <iostream>
 #include "screen.h"
 
-int screen::Output(){
-            char str[100] = "Message On screen";
-            std::cout<<str;
-            return str;
-
+void Screen::output(std::string str){
+    std::cout << str;
 }

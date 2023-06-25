@@ -1,10 +1,11 @@
 #ifndef SCREEN_H
 #define SCREEN_H
 
+#include <string>
 
-class screen {
+class Screen {
   public:
-    void Output();
+    void output(std::string);
 };
 
 
