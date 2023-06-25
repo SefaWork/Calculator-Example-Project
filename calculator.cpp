@@ -1,4 +1,5 @@
 #include "calculator.h"
+#include <iostream>
 #include <string>
 
 void Calculator::run() {
@@ -14,21 +15,27 @@ void Calculator::run() {
 
             switch (operation)
             {
-                case 1:
+                case 1: {
                     int additionResult = num1 + num2;
                     screen.output("The result is " + std::to_string(additionResult));
                     break;
-                case 2:
-                    int additionResult = num1 + num2;
-                    screen.output("The result is " + std::to_string(additionResult));
+                }
+                case 2: {
+                    int subResult = num1 + num2;
+                    screen.output("The result is " + std::to_string(subResult));
                     break;
-                case 3:
+                }
+                case 3: {
                     int multiplicationResult = num1 * num2;
                     screen.output("The result is " + std::to_string(multiplicationResult));
                     break;
-                case 4:
-                    double divisionResult = num1 / num2;
+                }
+                case 4: {
+                    float divisionResult = (float)((float)num1 / (float)num2);
                     screen.output("The result is " + std::to_string(divisionResult));
+                    break;
+                }
+                default:
                     break;
             }
         }
